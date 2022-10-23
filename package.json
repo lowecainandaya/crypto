@@ -1,6 +1,6 @@
 {
-  "name": "crypto",
-  "version": "0.0.1",
+  "name": "@fntools/crypto",
+  "version": "0.0.3",
   "description": "Just encrypt data in JSON format ",
   "main": "./dist/cjs/index.js",
   "mudule" : "./dist/esm/crypto.js",
@@ -15,11 +15,12 @@
   "scripts": {
     "dev" : "tsc --watch",
     "test" : "nodemon dist/cjs/crypto.test.js",
-    "build" : "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json"
+    "build" : "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
+    "publish" : "npm publish"
   },
   "keywords": [
     "AES","encrypt", "decrypt", "crypto"],
-  "homepage": "https://github.com/FreenetProject/must",
+  "homepage": "https://github.com/lowecainandaya/crypto",
   "author": "Lluie Cain Andaya",
   "license": "MIT",
   "private": false,

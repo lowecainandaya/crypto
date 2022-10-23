@@ -8,9 +8,9 @@ $ npm install @fntools/crypto
 ```
 ### Usage 
 ```javascript 
-const crypto = require("@validitor/main");
+const crypto = require("@fntools/crypto");
 // IN ES6 PROJECTS 
-// import crypto from "crypto";
+// import crypto from "@fntools/crypto";
 const data = "hello world";
 
 const {parse,stringify} = JSON;

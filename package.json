@@ -1,0 +1,31 @@
+{
+  "name": "crypto",
+  "version": "0.0.1",
+  "description": "Just encrypt data in JSON format ",
+  "main": "./dist/cjs/index.js",
+  "mudule" : "./dist/esm/crypto.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lowecainandaya/crypto"
+  },
+  "dependencies": {
+    "crypto-js": "^4.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev" : "tsc --watch",
+    "test" : "nodemon dist/cjs/crypto.test.js",
+    "build" : "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json"
+  },
+  "keywords": [
+    "AES","encrypt", "decrypt", "crypto"],
+  "homepage": "https://github.com/FreenetProject/must",
+  "author": "Lluie Cain Andaya",
+  "license": "MIT",
+  "private": false,
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "engineStrict": true
+}
+

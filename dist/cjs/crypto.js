@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const formater_js_1 = __importDefault(require("./formater.js"));
 const crypto_js_1 = __importDefault(require("crypto-js"));
-const onlyif_1 = require("@validitor/main/onlyif");
+const main_1 = require("@validitor/main");
 const { stringify, parse } = JSON;
 const aes = crypto_js_1.default.AES;
 class _Crypto {
@@ -13,11 +13,11 @@ class _Crypto {
     encrypt(data, password) {
         var __data;
         // everthing that is not an object conver to string
-        (0, onlyif_1.onlyIf)(typeof data !== "object").execute(() => {
+        (0, main_1.onlyIf)(typeof data !== "object").execute(() => {
             __data = data.toString();
         });
         // stringify if data is an objecy literal 
-        (0, onlyif_1.onlyIf)(typeof data === "object").execute(() => {
+        (0, main_1.onlyIf)(typeof data === "object").execute(() => {
             __data = stringify(data);
         });
         // incrypt

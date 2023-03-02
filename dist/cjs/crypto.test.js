@@ -15,7 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const crypto_js_1 = __importDefault(require("./crypto.js"));
 const { parse, stringify } = JSON;
 const samplePassword = "1";
-const message = " HELLO WAORLD IN CbhAPITAL ok";
+const message = " HELLO WAORLD IN CAPITAL";
 function test() {
     return __awaiter(this, void 0, void 0, function* () {
         var encrypted = yield crypto_js_1.default.encrypt(message, samplePassword);

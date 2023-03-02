@@ -1,2 +1,2 @@
 declare module "crypto-js";
-declare module "@validitor/main/";
+declare module "@validitor/main";

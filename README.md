@@ -12,21 +12,19 @@ const crypto = require("@fntools/crypto");
 // IN ES6 PROJECTS 
 // import crypto from "@fntools/crypto";
 const data = "hello world";
-
-const {parse,stringify} = JSON;
 const samplePassword:string  = "1";
 const message = " HELLO WAORLD IN CAPITAL";
 async function test() {
   var encrypted = await crypto.encrypt(message,samplePassword);
-  await console.log("success incrypt message",encrypted);
-  await console.log("in object", parse(encrypted))
+  await console.log("in json",encrypted);
+  await console.log("in object", JSON.parse(encrypted))
   const decrypted =  crypto.decrypt(encrypted, samplePassword);
   await console.log(decrypted)
 }
 
 test();
 
-/* success incrypt message {"ct":"r+RW++RF4aUhYQxiw5zYdJ5CEb8BRaEOJWNgIclwBgY=","iv":"e400192f0188ec5920d71c73325f6016","s":"4dbffa7513f88684"}
+/* in json {"ct":"r+RW++RF4aUhYQxiw5zYdJ5CEb8BRaEOJWNgIclwBgY=","iv":"e400192f0188ec5920d71c73325f6016","s":"4dbffa7513f88684"}
 in object {
   ct: 'r+RW++RF4aUhYQxiw5zYdJ5CEb8BRaEOJWNgIclwBgY=',
   iv: 'e400192f0188ec5920d71c73325f6016',

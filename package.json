@@ -1,9 +1,15 @@
 {
   "name": "@fntools/crypto",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "description": "Just encrypt data in JSON format ",
   "main": "./dist/cjs/index.js",
   "mudule" : "./dist/esm/crypto.js",
+  "exports" : {
+    "." : {
+      "import" : "./dist/esm/crypto.js",
+      "require" : "./dist/cjs/index.js"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/lowecainandaya/crypto"
@@ -16,7 +22,7 @@
     "dev" : "tsc --watch",
     "test" : "nodemon dist/cjs/crypto.test.js",
     "build" : "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
-    "publish" : "npm publish"
+    "deploy" : "npm publish --access public"
   },
   "keywords": [
     "AES","encrypt", "decrypt", "crypto"],

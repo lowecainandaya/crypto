@@ -1,6 +1,6 @@
 import format from "./formater.js";
 import crypto from "crypto-js";
-import {onlyIf} from "@validitor/main/onlyif";
+import {onlyIf} from "@validitor/main";
 const {stringify,parse} = JSON;
 const aes = crypto.AES;
 
